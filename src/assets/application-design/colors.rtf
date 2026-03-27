@@ -1,0 +1,727 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Symbol;}{\f2\fnil Calibri;}{\f3\fnil\fcharset1 Cambria Math;}}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont3\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 /*\par
+ * \f1\u9556?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9559?\f0\par
+ * \f1\u9553?\f0        SELECT-YOU-XI  \'b7  Complete @theme Color Token System               \f1\u9553?\f0\par
+ * \f1\u9553?\f0        For Tailwind CSS v4 + React                                        \f1\u9553?\f0\par
+ * \f1\u9553?\f0                                                                           \f1\u9553?\f0\par
+ * \f1\u9553?\f0   HOW TO USE                                                              \f1\u9553?\f0\par
+ * \f1\u9553?\f0   1. Place this file at: src/styles/theme.css                             \f1\u9553?\f0\par
+ * \f1\u9553?\f0   2. In your main CSS entry: @import "./theme.css";                       \f1\u9553?\f0\par
+ * \f1\u9553?\f0   3. In tailwind.config usage: use tokens as Tailwind utilities           \f1\u9553?\f0\par
+ * \f1\u9553?\f0      e.g.  bg-primary-400  text-danger-500  border-neutral-700            \f1\u9553?\f0\par
+ * \f1\u9553?\f0   4. In React inline styles: var(--primary-400)                           \f1\u9553?\f0\par
+ * \f1\u9553?\f0   5. Tailwind v4 reads @theme natively \f2\emdash  no config mapping needed         \f1\u9553?\f0\par
+ * \f1\u9562?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9565?\f0\par
+ *\par
+ *  COLOR MAP  (base hue \f3\u8594?\f0  role)\par
+ *  \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0\par
+ *  --base-primary    #EDB92E  Amber Gold   \f3\u8594?\f0  CTAs, coin badges, prices\par
+ *  --base-secondary  #3B64E0  Indigo Blue  \f3\u8594?\f0  active states, nav accents\par
+ *  --base-info       #0D8FE8  Sky Blue     \f3\u8594?\f0  upcoming badges, info panels\par
+ *  --base-success    #1E9E6E  Forest Green \f3\u8594?\f0  credits, positive scores\par
+ *  --base-warning    #DC7010  Warm Amber   \f3\u8594?\f0  pending states, warnings\par
+ *  --base-danger     #E83347  Crimson Rose \f3\u8594?\f0  delete, debit, errors\par
+ *  --base-neutral    #0D1120  Cool Graphite\f3\u8594?\f0  all structural dark surfaces\par
+ */\par
+\par
+@theme \{\par
+  /* \f1\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\f0\par
+     ALIAS LAYER\par
+     The 7 single-source-of-truth hue tokens.\par
+     Every shade in the semantic layer derives from these.\par
+     Change one here and the whole scale shifts.\par
+     \f1\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\f0  */\par
+\par
+  --base-primary: oklch(0.81 0.17 83); /* Amber Gold   #EDB92E */\par
+  --base-secondary: oklch(0.54 0.18 258); /* Indigo Blue  #3B64E0 */\par
+  --base-info: oklch(0.6 0.17 231); /* Sky Blue     #0D8FE8 */\par
+  --base-success: oklch(0.6 0.14 162); /* Forest Green #1E9E6E */\par
+  --base-warning: oklch(0.62 0.18 47); /* Warm Amber   #DC7010 */\par
+  --base-danger: oklch(0.56 0.21 21); /* Crimson Rose #E83347 */\par
+  --base-neutral: oklch(0.14 0.03 258); /* Cool Graphite #0D1120 */\par
+\par
+  /* \f1\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\f0\par
+     SEMANTIC LAYER \f2\emdash  GOLDEN RATIO LIGHTNESS SCALE\par
+     Steps follow a geometric progression (ratio \f3\u8776?\f0  0.618) so that\par
+     perceptual contrast between adjacent shades stays consistent.\par
+     50  \f3\u8594?\f0  near-white tints  (backgrounds, glows)\par
+     100 \f3\u8594?\f0  very light tints  (badge fills, icon fills)\par
+     200 \f3\u8594?\f0  light tints       (hover surfaces, borders)\par
+     300 \f3\u8594?\f0  soft              (subtle borders, dividers)\par
+     400 \f3\u8594?\f0  mild              (muted text, supporting icons)\par
+     500 \f3\u8594?\f0  BASE              (canonical mid \f2\emdash  main use of the color)\par
+     600 \f3\u8594?\f0  rich              (interactive / hover states)\par
+     700 \f3\u8594?\f0  strong            (pressed / active states)\par
+     800 \f3\u8594?\f0  deep              (bold text on light bg)\par
+     900 \f3\u8594?\f0  darkest           (max contrast, dark surface text)\par
+     \f1\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\f0  */\par
+\par
+  /* \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0\par
+     PRIMARY  \'b7  Amber Gold\par
+     Hue 83\'b0  |  Base #EDB92E  |  oklch(0.81 0.17 83)\par
+\par
+     UI roles:\par
+       50\f2\endash 200  \f3\u8594?\f0  coin badge bg, hero badge bg, role badge bg\par
+       300     \f3\u8594?\f0  coin badge border, featured card border\par
+       400\f2\endash 500 \f3\u8594?\f0  logo accent, price text, coin amount, CTA start\par
+       600     \f3\u8594?\f0  CTA gradient end, logo icon bg end\par
+       700     \f3\u8594?\f0  pressed CTA, hover gold\par
+       800\f2\endash 900 \f3\u8594?\f0  gold text on very light backgrounds\par
+   \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+\par
+  --primary-50: oklch(\par
+    0.98 0.016 88\par
+  ); /* hsl(46  80% 97%)  #fefaec  faint gold bg, glow base        */\par
+  --primary-100: oklch(\par
+    0.95 0.042 89\par
+  ); /* hsl(47  90% 90%)  #fdf0c0  coin badge bg, hero badge fill  */\par
+  --primary-200: oklch(\par
+    0.91 0.082 88\par
+  ); /* hsl(46  88% 80%)  #f9e08a  role badge bg, light accent      */\par
+  --primary-300: oklch(\par
+    0.87 0.124 87\par
+  ); /* hsl(45  86% 70%)  #f5cc52  badge border, card glow border   */\par
+  --primary-400: oklch(\par
+    0.84 0.152 85\par
+  ); /* hsl(44  84% 62%)  #f0c030  logo accent, price text          */\par
+  --primary-500: oklch(\par
+    0.81 0.17 83\par
+  ); /* hsl(43  84% 55%)  #edb92e  BASE \f2\emdash  CTA start, coin badge txt */\par
+  --primary-600: oklch(\par
+    0.74 0.168 78\par
+  ); /* hsl(41  88% 44%)  #d4980f  CTA gradient mid, hover gold     */\par
+  --primary-700: oklch(\par
+    0.64 0.152 74\par
+  ); /* hsl(39  90% 36%)  #b07a0a  pressed CTA, dark icon bg        */\par
+  --primary-800: oklch(\par
+    0.51 0.12 70\par
+  ); /* hsl(37  88% 28%)  #8a5d07  gold text on light bg            */\par
+  --primary-900: oklch(\par
+    0.35 0.08 66\par
+  ); /* hsl(35  90% 18%)  #5a3b04  max-contrast gold on white       */\par
+\par
+  /* \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0\par
+     SECONDARY  \'b7  Indigo Blue\par
+     Hue 258\'b0  |  Base #3B64E0  |  oklch(0.54 0.18 258)\par
+\par
+     UI roles:\par
+       50\f2\endash 100  \f3\u8594?\f0  active state backgrounds, selected row fill\par
+       200     \f3\u8594?\f0  badge backgrounds for informational chips\par
+       300     \f3\u8594?\f0  border on active elements, focus rings\par
+       400     \f3\u8594?\f0  supporting accent icons, secondary nav items\par
+       500     \f3\u8594?\f0  BASE \f2\emdash  profile stats table header bg\par
+       600     \f3\u8594?\f0  active nav link underline, toggle active\par
+       700     \f3\u8594?\f0  pressed secondary button\par
+       800\f2\endash 900 \f3\u8594?\f0  secondary text on very light surfaces\par
+   \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+\par
+  --secondary-50: oklch(\par
+    0.97 0.016 258\par
+  ); /* hsl(225 100% 97%)  #f0f4ff  lightest blue tint, bg wash  */\par
+  --secondary-100: oklch(\par
+    0.93 0.042 258\par
+  ); /* hsl(224  97% 92%)  #d9e4ff  chip bg, selected row fill   */\par
+  --secondary-200: oklch(\par
+    0.87 0.082 258\par
+  ); /* hsl(223  97% 84%)  #b3c8ff  hover surface, soft border   */\par
+  --secondary-300: oklch(\par
+    0.79 0.122 258\par
+  ); /* hsl(223  97% 74%)  #7fa4ff  active focus ring            */\par
+  --secondary-400: oklch(\par
+    0.71 0.152 258\par
+  ); /* hsl(225  88% 65%)  #5a84f5  accent icons, subnav         */\par
+  --secondary-500: oklch(\par
+    0.63 0.172 258\par
+  ); /* hsl(227  72% 56%)  #4070e6  BASE \f2\emdash  stats header          */\par
+  --secondary-600: oklch(\par
+    0.54 0.18 258\par
+  ); /* hsl(228  64% 45%)  #3b64e0  active elements, toggle      */\par
+  --secondary-700: oklch(\par
+    0.45 0.168 260\par
+  ); /* hsl(228  69% 36%)  #2a4dbf  pressed secondary            */\par
+  --secondary-800: oklch(\par
+    0.34 0.138 262\par
+  ); /* hsl(228  74% 25%)  #1c3899  strong emphasis              */\par
+  --secondary-900: oklch(\par
+    0.21 0.09 266\par
+  ); /* hsl(231  82% 14%)  #0d1f70  max contrast on light bg     */\par
+\par
+  /* \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0\par
+     INFO  \'b7  Sky Blue\par
+     Hue 231\'b0  |  Base #0D8FE8  |  oklch(0.60 0.17 231)\par
+\par
+     UI roles:\par
+       50\f2\endash 100  \f3\u8594?\f0  info panel backgrounds, tooltip bg\par
+       200     \f3\u8594?\f0  upcoming fixture badge fill\par
+       300     \f3\u8594?\f0  upcoming badge border\par
+       400     \f3\u8594?\f0  informational icon fill, nav hint\par
+       500\f2\endash 600 \f3\u8594?\f0  BASE \f2\emdash  info state text, notification\par
+       700     \f3\u8594?\f0  pressed info button\par
+       800\f2\endash 900 \f3\u8594?\f0  info text on light backgrounds\par
+   \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+\par
+  --info-50: oklch(\par
+    0.97 0.016 228\par
+  ); /* hsl(208 100% 97%)  #eff8ff  faint sky tint, tooltip bg       */\par
+  --info-100: oklch(\par
+    0.94 0.038 226\par
+  ); /* hsl(207  97% 93%)  #dbeffe  info panel bg                    */\par
+  --info-200: oklch(\par
+    0.88 0.074 224\par
+  ); /* hsl(207  97% 84%)  #b3dffe  upcoming badge fill              */\par
+  --info-300: oklch(\par
+    0.8 0.112 223\par
+  ); /* hsl(206  93% 73%)  #76c4fc  upcoming badge border            */\par
+  --info-400: oklch(\par
+    0.72 0.148 226\par
+  ); /* hsl(206  90% 59%)  #36a8f8  info icon, hint text             */\par
+  --info-500: oklch(\par
+    0.64 0.168 229\par
+  ); /* hsl(206  90% 49%)  #1298f0  BASE \f2\emdash  info state               */\par
+  --info-600: oklch(\par
+    0.6 0.17 231\par
+  ); /* hsl(206  91% 48%)  #0d8fe8  rich info, notification text     */\par
+  --info-700: oklch(\par
+    0.5 0.158 236\par
+  ); /* hsl(207  91% 38%)  #0872c4  pressed info button              */\par
+  --info-800: oklch(\par
+    0.39 0.13 242\par
+  ); /* hsl(208  90% 28%)  #065898  strong info on light bg          */\par
+  --info-900: oklch(\par
+    0.26 0.09 248\par
+  ); /* hsl(210  93% 18%)  #033d6a  max contrast info               */\par
+\par
+  /* \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0\par
+     SUCCESS  \'b7  Forest Green\par
+     Hue 162\'b0  |  Base #1E9E6E  |  oklch(0.60 0.14 162)\par
+\par
+     UI roles:\par
+       50\f2\endash 100  \f3\u8594?\f0  success alert background, credit icon bg\par
+       200     \f3\u8594?\f0  credit transaction icon border\par
+       300     \f3\u8594?\f0  positive score value accent\par
+       400     \f3\u8594?\f0  success icon fill, checkmark\par
+       500\f2\endash 600 \f3\u8594?\f0  BASE \f2\emdash  credit amount text, success state\par
+       700     \f3\u8594?\f0  pressed success button\par
+       800\f2\endash 900 \f3\u8594?\f0  success text on light surfaces\par
+   \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+\par
+  --success-50: oklch(\par
+    0.97 0.016 158\par
+  ); /* hsl(151  71% 95%) #edfaf4 faint green, success panel bg */\par
+  --success-100: oklch(\par
+    0.94 0.046 156\par
+  ); /* hsl(151  72% 88%) #d2f4e4 credit icon bg */\par
+  --success-200: oklch(\par
+    0.88 0.09 154\par
+  ); /* hsl(152  68% 77%) #a4e8ca credit icon border */\par
+  --success-300: oklch(\par
+    0.8 0.122 162\par
+  ); /* hsl(158  57% 63%) #6dd4aa positive score highlight */\par
+  --success-400: oklch(\par
+    0.72 0.138 162\par
+  ); /* hsl(160  54% 48%) #3db88a success icon, checkmark */\par
+  --success-500: oklch(\par
+    0.64 0.144 162\par
+  ); /* hsl(161  60% 41%) #26a876 strong success accent */\par
+  --success-600: oklch(\par
+    0.6 0.14 162\par
+  ); /* hsl(161  68% 37%) #1e9e6e BASE \f2\emdash  credit text */\par
+  --success-700: oklch(\par
+    0.5 0.122 161\par
+  ); /* hsl(161  72% 29%) #15805a pressed success button */\par
+  --success-800: oklch(\par
+    0.39 0.096 161\par
+  ); /* hsl(161  74% 21%) #0e6044 strong success on light bg */\par
+  --success-900: oklch(\par
+    0.26 0.062 161\par
+  ); /* hsl(162  76% 14%) #073d2a max contrast green */\par
+\par
+  /* \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0\par
+     WARNING  \'b7  Warm Amber-Orange\par
+     Hue 47\'b0   |  Base #DC7010  |  oklch(0.62 0.18 47)\par
+\par
+     UI roles:\par
+       50\f2\endash 100  \f3\u8594?\f0  warning panel bg, pending icon bg\par
+       200     \f3\u8594?\f0  pending badge fill, wallet card glow wash\par
+       300     \f3\u8594?\f0  pending badge border\par
+       400     \f3\u8594?\f0  warning icon fill, caution text\par
+       500     \f3\u8594?\f0  BASE \f2\emdash  warning state, pending amount text\par
+       600     \f3\u8594?\f0  pressed warning, strong caution\par
+       700     \f3\u8594?\f0  warning text on light bg\par
+       800\f2\endash 900 \f3\u8594?\f0  max-contrast warning on white\par
+   \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+\par
+  --warning-50: oklch(\par
+    0.98 0.018 72\par
+  ); /* hsl(34 100% 96%) #fff8ee faint orange tint, panel bg */\par
+  --warning-100: oklch(\par
+    0.95 0.046 70\par
+  ); /* hsl(34 97% 90%) #feedd0 pending icon bg */\par
+  --warning-200: oklch(\par
+    0.88 0.092 67\par
+  ); /* hsl(33  96% 80%  #fdcf9a pending badge fill */\par
+  --warning-300: oklch(\par
+    0.8 0.138 61\par
+  ); /* hsl(32 95% 68%) #fbb060 pending badge border */\par
+  --warning-400: oklch(\par
+    0.72 0.172 54\par
+  ); /* hsl(30 92% 56%) #f7902a warning icon, caution */\par
+  --warning-500: oklch(\par
+    0.66 0.18 50\par
+  ); /* hsl(29 89% 48%) #e87818  warning accent */\par
+  --warning-600: oklch(\par
+    0.62 0.18 47\par
+  ); /* hsl(28 88% 46%) #dc7010  BASE \f2\emdash  warning state */\par
+  --warning-700: oklch(\par
+    0.52 0.162 44\par
+  ); /* hsl(26 89% 37%) #b5580b pressed warning */\par
+  --warning-800: oklch(\par
+    0.41 0.132 41\par
+  ); /* hsl(24 87% 28%) #8c4008 strong warning on light bg */\par
+  --warning-900: oklch(\par
+    0.28 0.09 38\par
+  ); /* hsl(22 88% 19%) #5e2804 max contrast warning */\par
+\par
+  /* \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0\par
+     DANGER  \'b7  Crimson Rose\par
+     Hue 21\'b0   |  Base #E83347  |  oklch(0.56 0.21 21)\par
+\par
+     UI roles:\par
+       50\f2\endash 100  \f3\u8594?\f0  error alert bg, delete button bg\par
+       200     \f3\u8594?\f0  delete button border, debit icon bg\par
+       300     \f3\u8594?\f0  debit icon border, soft danger border\par
+       400     \f3\u8594?\f0  danger icon, negative score text\par
+       500\f2\endash 600 \f3\u8594?\f0  BASE \f2\emdash  delete icon color, debit amount text\par
+       700     \f3\u8594?\f0  pressed danger, strong error state\par
+       800\f2\endash 900 \f3\u8594?\f0  danger text on light surfaces\par
+   \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+\par
+  --danger-50: oklch(\par
+    0.97 0.018 15\par
+  ); /* hsl(356 100% 97%) #fff1f2 faint blush, error panel bg */\par
+  --danger-100: oklch(\par
+    0.93 0.044 15\par
+  ); /* hsl(356 100% 93%) #ffe1e3  delete button bg (6% equiv) */\par
+  --danger-200: oklch(\par
+    0.86 0.088 15\par
+  ); /* hsl(356 100% 87%) #ffc2c6 delete button border */\par
+  --danger-300: oklch(\par
+    0.77 0.134 16\par
+  ); /* hsl(356 100% 77%) #ff9198  debit icon border */\par
+  --danger-400: oklch(\par
+    0.68 0.182 18\par
+  ); /* hsl(355 100% 68%) #ff5f6a  danger icon, negative score */\par
+  --danger-500: oklch(\par
+    0.62 0.204 20\par
+  ); /* hsl(354 82% 58%) #f04050  strong danger */\par
+  --danger-600: oklch(\par
+    0.56 0.21 21\par
+  ); /* hsl(353 79% 55%) #e83347  BASE \f2\emdash  delete icon, debit txt */\par
+  --danger-700: oklch(\par
+    0.46 0.192 22\par
+  ); /* hsl(352 73% 44%) #c41e32  pressed danger */\par
+  --danger-800: oklch(\par
+    0.35 0.152 22\par
+  ); /* hsl(351 78% 33%) #9a1226  danger text on light bg */\par
+  --danger-900: oklch(\par
+    0.23 0.1 22\par
+  ); /* hsl(350 82% 21%) #640a18  max contrast danger */\par
+\par
+  /* \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0\par
+     NEUTRAL  \'b7  Cool Graphite\par
+     Hue 258\'b0  |  Base #0D1120  |  oklch(0.14 0.03 258)\par
+\par
+     UI roles:\par
+       50      \f3\u8594?\f0  newsletter light bg start, email input bg\par
+       100     \f3\u8594?\f0  newsletter light bg mid, input surfaces\par
+       200     \f3\u8594?\f0  input borders on light bg, dividers\par
+       300     \f3\u8594?\f0  placeholder text, stat labels\par
+       400     \f3\u8594?\f0  muted body text, footer links\par
+       500     \f3\u8594?\f0  secondary text (65% opacity equiv), icon fills\par
+       600     \f3\u8594?\f0  border strokes (8% white equiv on dark)\par
+       700     \f3\u8594?\f0  card image placeholder bg (#1a2030)\par
+       800     \f3\u8594?\f0  card / panel surface bg (#111827)\par
+       900     \f3\u8594?\f0  page background, deepest surface (#0a0d14)\par
+   \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+\par
+  --neutral-50: oklch(\par
+    0.97 0.008 258\par
+  ); /* hsl(220 14% 97%) #f5f6f8  newsletter bg, input bg */\par
+  --neutral-100: oklch(\par
+    0.92 0.014 258\par
+  ); /* hsl(222 16% 91%) #e8eaef  input surface, light divider */\par
+  --neutral-200: oklch(\par
+    0.84 0.022 258\par
+  ); /* hsl(222 14% 83%) #cdd1db  input border on light bg */\par
+  --neutral-300: oklch(\par
+    0.72 0.03 258\par
+  ); /* hsl(221 14% 70%) #a8afbe  placeholder, stat labels */\par
+  --neutral-400: oklch(\par
+    0.57 0.036 258\par
+  ); /* hsl(220 12% 55%) #7c8599  muted text, footer links */\par
+  --neutral-500: oklch(\par
+    0.43 0.032 258\par
+  ); /* hsl(218 13% 39%) #56606f  secondary text on dark */\par
+  --neutral-600: oklch(\par
+    0.3 0.026 258\par
+  ); /* hsl(218 14% 25%) #363e4a  card image placeholder dark */\par
+  --neutral-700: oklch(\par
+    0.2 0.024 258\par
+  ); /* hsl(216 18% 16%) #212830  card image placeholder */\par
+  --neutral-800: oklch(\par
+    0.15 0.022 258\par
+  ); /* hsl(217 28% 11%) #111827  card / panel surface bg */\par
+  --neutral-900: oklch(\par
+    0.09 0.018 262\par
+  ); /* hsl(226 44%  5%) #060910  footer bg, deepest surface */\par
+\par
+  /* \f1\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\f0\par
+     GRADIENT LAYER\par
+     Named gradient tokens ready for use in bg-[--gradient-*]\par
+     or inline style=\{\{ background: "var(--gradient-cta-gold)" \}\}\par
+     \f1\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\f0  */\par
+\par
+  /* Buttons */\par
+  --gradient-cta-gold: linear-gradient(\par
+    135deg,\par
+    var(--primary-500) 0%,\par
+    var(--primary-700) 100%\par
+  );\par
+\par
+  --gradient-cta-lime: linear-gradient(\par
+    135deg,\par
+    oklch(0.91 0.22 127) 0%,\par
+    oklch(0.86 0.22 127) 100%\par
+  );\par
+\par
+  /* Hero banner */\par
+  --gradient-hero: linear-gradient(\par
+    135deg,\par
+    var(--neutral-800) 0%,\par
+    oklch(0.12 0.05 290) 40%,\par
+    oklch(0.12 0.05 230) 100%\par
+  );\par
+\par
+  /* Glow effects */\par
+  --gradient-glow-purple: radial-gradient(\par
+    circle,\par
+    oklch(0.4 0.22 290 / 0.4) 0%,\par
+    transparent 70%\par
+  );\par
+\par
+  --gradient-glow-red: radial-gradient(\par
+    circle,\par
+    oklch(0.55 0.22 24 / 0.3) 0%,\par
+    transparent 70%\par
+  );\par
+\par
+  --gradient-glow-gold: radial-gradient(\par
+    circle,\par
+    oklch(0.81 0.17 83 / 0.15) 0%,\par
+    transparent 70%\par
+  );\par
+\par
+  /* Card surfaces */\par
+  --gradient-card-image: linear-gradient(\par
+    135deg,\par
+    var(--neutral-700) 0%,\par
+    var(--neutral-600) 100%\par
+  );\par
+\par
+  --gradient-card-featured: linear-gradient(\par
+    160deg,\par
+    oklch(0.24 0.1 264) 0%,\par
+    oklch(0.18 0.08 240) 100%\par
+  );\par
+\par
+  /* Wallet panel */\par
+  --gradient-wallet: linear-gradient(\par
+    145deg,\par
+    var(--neutral-800) 0%,\par
+    oklch(0.12 0.05 290) 50%,\par
+    oklch(0.12 0.05 230) 100%\par
+  );\par
+\par
+  /* Newsletter section (light) */\par
+  --gradient-newsletter: linear-gradient(\par
+    135deg,\par
+    var(--neutral-50) 0%,\par
+    var(--secondary-50) 50%,\par
+    oklch(0.96 0.04 65) 100%\par
+  );\par
+\par
+  /* Podium bases */\par
+  --gradient-podium-gold: linear-gradient(\par
+    180deg,\par
+    oklch(0.81 0.17 83 / 0.2) 0%,\par
+    oklch(0.81 0.17 83 / 0.04) 100%\par
+  );\par
+\par
+  --gradient-podium-silver: linear-gradient(\par
+    180deg,\par
+    oklch(0.72 0.03 258 / 0.15) 0%,\par
+    oklch(0.72 0.03 258 / 0.03) 100%\par
+  );\par
+\par
+  --gradient-podium-bronze: linear-gradient(\par
+    180deg,\par
+    oklch(0.62 0.12 55 / 0.15) 0%,\par
+    oklch(0.62 0.12 55 / 0.03) 100%\par
+  );\par
+\par
+  /* Player profile hero */\par
+  --gradient-profile-hero: linear-gradient(\par
+    160deg,\par
+    oklch(0.12 0.05 230) 0%,\par
+    oklch(0.12 0.05 290) 50%,\par
+    oklch(0.12 0.08 330) 100%\par
+  );\par
+\par
+  --gradient-profile-overlay: linear-gradient(\par
+    0deg,\par
+    var(--neutral-800) 0%,\par
+    transparent 60%\par
+  );\par
+\par
+  /* \f1\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\f0\par
+     COMPONENT LAYER\par
+     Semantic role-named tokens consumed directly by components.\par
+     Use these in Tailwind: text-[--color-text-gold]\par
+     Use in React: style=\{\{ color: "var(--color-text-gold)" \}\}\par
+     \f1\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\u9552?\f0  */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Surfaces \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --color-bg-page: var(--neutral-700); /* body background */\par
+  --color-bg-nav: oklch(0.14 0.03 258); /* #0d1120 navbar */\par
+  --color-bg-footer: var(--neutral-900); /* #060910 footer */\par
+  --color-bg-card: var(--neutral-800); /* #111827 all cards/panels */\par
+  --color-bg-card-hover: oklch(0.17 0.026 258); /* card hover surface */\par
+  --color-bg-card-image: var(--neutral-700); /* card image placeholder */\par
+  --color-bg-card-image-deep: var(\par
+    --neutral-600\par
+  ); /* card image placeholder alt */\par
+  --color-bg-input-dark: oklch(1 0 0 / 0.06); /* ghost input on dark bg */\par
+  --color-bg-input-light: var(--neutral-50); /* newsletter input bg */\par
+  --color-bg-toggle: oklch(1 0 0 / 0.06); /* toggle track bg */\par
+  --color-bg-claim: oklch(1 0 0 / 0.04); /* dashed claim box */\par
+  --color-bg-wallet: var(--gradient-wallet); /* wallet card bg */\par
+  --color-bg-hero: var(--gradient-hero); /* hero banner bg */\par
+  --color-bg-newsletter: var(--gradient-newsletter); /* newsletter section bg */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Borders \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --color-border-default: oklch(1 0 0 / 0.08); /* card/panel default border */\par
+  --color-border-subtle: oklch(1 0 0 / 0.06); /* footer top, card-footer line */\par
+  --color-border-faint: oklch(1 0 0 / 0.07); /* nav bottom border */\par
+  --color-border-divider: oklch(1 0 0 / 0.04); /* stat row bottom divider */\par
+  --color-border-input: oklch(0 0 0 / 0.12); /* input border on light bg */\par
+  --color-border-claim: oklch(1 0 0 / 0.15); /* dashed claim box border */\par
+  --color-border-gold: var(--primary-300); /* coin badge, featured card */\par
+  --color-border-gold-soft: oklch(0.81 0.17 83 / 0.35); /* role badge border */\par
+  --color-border-gold-coin: oklch(0.81 0.17 83 / 0.3); /* coin badge border */\par
+  --color-border-lime: oklch(0.91 0.22 127 / 0.3); /* lime active pill border */\par
+  --color-border-blue: oklch(0.54 0.18 258 / 0.2); /* upcoming badge border */\par
+  --color-border-danger: oklch(0.56 0.21 21 / 0.2); /* delete button border */\par
+  --color-border-success: oklch(0.6 0.14 162 / 0.2); /* credit icon border */\par
+  --color-border-warning: oklch(0.62 0.18 47 / 0.2); /* pending icon border */\par
+  --color-border-podium-gold: var(\par
+    --primary-500\par
+  ); /* 1st podium ring               */\par
+  --color-border-podium-silver: oklch(0.72 0.03 258); /* 2nd podium ring */\par
+  --color-border-podium-bronze: oklch(0.62 0.12 55); /* 3rd podium ring */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Text \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --color-text-primary: oklch(1 0 0); /* #fff headings, player names   */\par
+  --color-text-secondary: oklch(\par
+    1 0 0 / 0.65\par
+  ); /* nav links default             */\par
+  --color-text-tertiary: oklch(\par
+    1 0 0 / 0.55\par
+  ); /* hero subtext                  */\par
+  --color-text-muted: oklch(1 0 0 / 0.45); /* country names, labels         */\par
+  --color-text-dim: oklch(1 0 0 / 0.4); /* stat labels, footer links     */\par
+  --color-text-faint: oklch(1 0 0 / 0.35); /* uppercase sub-labels          */\par
+  --color-text-ghost: oklch(1 0 0 / 0.3); /* timestamps, footer bottom     */\par
+  --color-text-gold: var(--primary-500); /* prices, coin amounts, badges  */\par
+  --color-text-gold-dim: oklch(\par
+    0.81 0.17 83 / 0.6\par
+  ); /* coin label below amount       */\par
+  --color-text-lime: oklch(0.91 0.22 127); /* active toggle, live badge     */\par
+  --color-text-danger: var(--danger-600); /* delete icon, debit amounts    */\par
+  --color-text-success: var(--success-600); /* credit amounts                */\par
+  --color-text-warning: var(--warning-500); /* pending amounts               */\par
+  --color-text-on-cta: oklch(0 0 0); /* #000 text on gold/lime btns   */\par
+  --color-text-newsletter: oklch(\par
+    0.14 0.03 258\par
+  ); /* dark text on light newsletter */\par
+  --color-text-newsletter-sub: oklch(\par
+    0.14 0.03 258 / 0.6\par
+  ); /* newsletter subtext           */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Buttons \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --color-btn-gold: var(\par
+    --gradient-cta-gold\par
+  ); /* gold primary CTA bg           */\par
+  --color-btn-lime: var(\par
+    --gradient-cta-lime\par
+  ); /* lime CTA bg                   */\par
+  --color-btn-ghost-bg: oklch(1 0 0 / 0.06); /* ghost btn bg                  */\par
+  --color-btn-ghost-border: oklch(\par
+    1 0 0 / 0.12\par
+  ); /* ghost btn border              */\par
+  --color-btn-ghost-text: oklch(\par
+    1 0 0 / 0.7\par
+  ); /* ghost btn label               */\par
+  --color-btn-outline-border: oklch(\par
+    0.91 0.22 127\par
+  ); /* outline lime btn border       */\par
+  --color-btn-outline-text: oklch(\par
+    0.91 0.22 127\par
+  ); /* outline lime btn label        */\par
+  --color-btn-danger-bg: oklch(\par
+    0.56 0.21 21 / 0.06\par
+  ); /* delete btn bg                 */\par
+  --color-btn-danger-border: oklch(\par
+    0.56 0.21 21 / 0.2\par
+  ); /* delete btn border             */\par
+  --color-btn-danger-text: var(\par
+    --danger-600\par
+  ); /* delete icon                   */\par
+  --color-btn-nav-bg: oklch(1 0 0 / 0.06); /* nav ghost btn bg              */\par
+  --color-btn-nav-border: oklch(\par
+    1 0 0 / 0.1\par
+  ); /* nav ghost btn border          */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Badges & Pills \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --color-badge-gold-bg: oklch(\par
+    0.81 0.17 83 / 0.15\par
+  ); /* role badge, coin badge bg     */\par
+  --color-badge-gold-border: oklch(\par
+    0.81 0.17 83 / 0.35\par
+  ); /* role badge border             */\par
+  --color-badge-gold-text: var(\par
+    --primary-500\par
+  ); /* role badge / coin text        */\par
+  --color-badge-lime-bg: oklch(\par
+    0.91 0.22 127 / 0.15\par
+  ); /* live match badge bg           */\par
+  --color-badge-lime-border: oklch(\par
+    0.91 0.22 127 / 0.3\par
+  ); /* live badge border             */\par
+  --color-badge-lime-text: oklch(\par
+    0.91 0.22 127\par
+  ); /* live badge label              */\par
+  --color-badge-blue-bg: oklch(\par
+    0.54 0.18 258 / 0.12\par
+  ); /* upcoming badge bg             */\par
+  --color-badge-blue-border: oklch(\par
+    0.54 0.18 258 / 0.2\par
+  ); /* upcoming badge border         */\par
+  --color-badge-blue-text: oklch(\par
+    0.75 0.13 258\par
+  ); /* upcoming badge label          */\par
+  --color-badge-code-bg: oklch(\par
+    0.91 0.22 127 / 0.12\par
+  ); /* 50-codes nav pill bg          */\par
+  --color-badge-code-border: oklch(\par
+    0.91 0.22 127 / 0.3\par
+  ); /* 50-codes nav pill border      */\par
+  --color-badge-code-text: oklch(\par
+    0.91 0.22 127\par
+  ); /* 50-codes text                 */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Transaction Icons \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --color-tx-credit-bg: oklch(\par
+    0.6 0.14 162 / 0.12\par
+  ); /* credit icon bg                */\par
+  --color-tx-credit-border: oklch(\par
+    0.6 0.14 162 / 0.2\par
+  ); /* credit icon border            */\par
+  --color-tx-debit-bg: oklch(\par
+    0.56 0.21 21 / 0.1\par
+  ); /* debit icon bg                 */\par
+  --color-tx-debit-border: oklch(\par
+    0.56 0.21 21 / 0.2\par
+  ); /* debit icon border             */\par
+  --color-tx-pending-bg: oklch(\par
+    0.81 0.17 83 / 0.1\par
+  ); /* pending icon bg               */\par
+  --color-tx-pending-border: oklch(\par
+    0.81 0.17 83 / 0.2\par
+  ); /* pending icon border           */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Scoring Cards (Rules screen) \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --color-score-bat-bg: oklch(\par
+    0.81 0.17 83 / 0.12\par
+  ); /* batting card icon bg          */\par
+  --color-score-bat-border: oklch(\par
+    0.81 0.17 83 / 0.2\par
+  ); /* batting card icon border      */\par
+  --color-score-ball-bg: oklch(\par
+    0.91 0.22 127 / 0.12\par
+  ); /* bowling card icon bg          */\par
+  --color-score-ball-border: oklch(\par
+    0.91 0.22 127 / 0.2\par
+  ); /* bowling card icon border      */\par
+  --color-score-field-bg: oklch(\par
+    0.6 0.17 231 / 0.12\par
+  ); /* fielding card icon bg         */\par
+  --color-score-field-border: oklch(\par
+    0.6 0.17 231 / 0.2\par
+  ); /* fielding card icon border     */\par
+  --color-score-positive: oklch(\par
+    0.91 0.22 127\par
+  ); /* positive point value text     */\par
+  --color-score-negative: var(--danger-600); /* negative point value text     */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Wallet \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --color-wallet-amount: var(--primary-500); /* large coin number             */\par
+  --color-wallet-label: oklch(\par
+    0.81 0.17 83 / 0.6\par
+  ); /* "Coins" sub-label             */\par
+  --color-wallet-unit: oklch(1 0 0 / 0.3); /* "\f3\u8776?\f0  $50.00" micro text         */\par
+  --color-wallet-stat-bg: oklch(\par
+    1 0 0 / 0.04\par
+  ); /* stat cell bg                  */\par
+  --color-wallet-stat-border: oklch(\par
+    1 0 0 / 0.08\par
+  ); /* stat cell border              */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Leaderboard \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --color-rank-1: var(--primary-500); /* 1st place rank number         */\par
+  --color-rank-2: oklch(0.72 0.03 258); /* 2nd place rank number         */\par
+  --color-rank-3: oklch(0.62 0.12 55); /* 3rd place rank number         */\par
+  --color-row-highlight-bg: oklch(\par
+    0.81 0.17 83 / 0.04\par
+  ); /* highlighted leaderboard row   */\par
+  --color-row-highlight-border: oklch(\par
+    0.81 0.17 83 / 0.2\par
+  ); /* highlighted row border       */\par
+  --color-glow-gold: oklch(\par
+    0.81 0.17 83 / 0.3\par
+  ); /* avatar glow for 1st place     */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Spacing tokens (consumed as Tailwind spacing) \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --spacing-page-x: 60px; /* desktop horizontal page padding          */\par
+  --spacing-page-x-m: 16px; /* mobile  horizontal page padding          */\par
+  --spacing-section: 36px; /* section-header top padding               */\par
+  --spacing-card-p: 16px; /* card internal padding (left/right)       */\par
+  --spacing-gap-grid: 20px; /* player card grid gap (desktop)           */\par
+  --spacing-gap-row: 12px; /* player list row gap                      */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Border Radius tokens \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --radius-xs: 8px; /* small badges, stat cells, tiny chips     */\par
+  --radius-sm: 10px; /* avatars, delete button                   */\par
+  --radius-md: 12px; /* avatar, player-row, tx item              */\par
+  --radius-lg: 14px; /* player-row, wallet stats cell            */\par
+  --radius-xl: 16px; /* player cards, summary panels             */\par
+  --radius-2xl: 20px; /* profile card, transactions panel         */\par
+  --radius-3xl: 24px; /* wallet card, newsletter section          */\par
+  --radius-pill: 9999px; /* all buttons, all pills, all toggles      */\par
+\par
+  /* \f1\u9472?\u9472?\f0  Shadow tokens \f1\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\f0  */\par
+  --shadow-gold: 0 0 20px oklch(0.81 0.17 83 / 0.3); /* podium 1st avatar glow        */\par
+  --shadow-card: 0 4px 24px oklch(0 0 0 / 0.3); /* card elevation on dark bg     */\par
+\}\lang9\par
+}
+ 
