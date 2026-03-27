@@ -2,7 +2,7 @@ import React from "react";
 
 const Subscribe = () => {
   return (
-    <div>
+    <div className="bg-white/85 h-50">
       <div className="join gap-2">
         <div>
           <label className="input validator join-item rounded-full">

@@ -15,7 +15,7 @@ const AvailablePayers = () => {
               key={index}
               onClick={() => setActive(index)}
               className={`text-sm font-semibold text-slate-400 capitalize px-4 py-1 border-0 rounded-full cursor-pointer transition-all duration-300
-              ${active === index ? "bg-lime-500 text-slate-900 font-semibold" : ""}`}
+              ${active === index ? "bg-green-500 text-slate-900 font-semibold" : ""}`}
             >
               {tab}
             </button>

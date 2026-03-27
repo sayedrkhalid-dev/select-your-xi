@@ -15,7 +15,7 @@
       "primaryColor": "#FFFF00",
       "secondaryColor": "#0081C8",
       "titles": 5,
-      "logo": "/logos/csk.png"
+      "logo": "/logos/CSKoutline.avif"
     },
     {
       "id": "mi",
@@ -32,11 +32,11 @@
       "primaryColor": "#004BA0",
       "secondaryColor": "#D1AB3E",
       "titles": 5,
-      "logo": "/logos/mi.png"
+      "logo": "/logos/MIoutline.avif"
     },
     {
       "id": "rcb",
-      "name": "Royal Challengers Bangalore",
+      "name": "Royal Challengers Bengaluru",
       "shortName": "RCB",
       "city": "Bengaluru",
       "state": "Karnataka",
@@ -46,10 +46,10 @@
       "captain": "Faf du Plessis",
       "coach": "Andy Flower",
       "owner": "United Spirits",
-      "primaryColor": "#DA1818",
+      "primaryColor": "#2b2a29",
       "secondaryColor": "#000000",
       "titles": 0,
-      "logo": "/logos/rcb.png"
+      "logo": "/logos/RCBoutline.avif"
     },
     {
       "id": "kkr",
@@ -66,7 +66,7 @@
       "primaryColor": "#3A225D",
       "secondaryColor": "#D4AF37",
       "titles": 2,
-      "logo": "/logos/kkr.png"
+      "logo": "/logos/KKRoutline.avif"
     },
     {
       "id": "dc",
@@ -83,7 +83,7 @@
       "primaryColor": "#17449B",
       "secondaryColor": "#EF1B23",
       "titles": 0,
-      "logo": "/logos/dc.png"
+      "logo": "/logos/DCoutline.avif"
     },
     {
       "id": "srh",
@@ -100,7 +100,7 @@
       "primaryColor": "#FF822A",
       "secondaryColor": "#000000",
       "titles": 1,
-      "logo": "/logos/srh.png"
+      "logo": "/logos/SRHoutline.avif"
     },
     {
       "id": "rr",
@@ -117,7 +117,7 @@
       "primaryColor": "#FF69B4",
       "secondaryColor": "#1E90FF",
       "titles": 1,
-      "logo": "/logos/rr.png"
+      "logo": "/logos/RRoutline.png"
     },
     {
       "id": "pbks",
@@ -134,7 +134,7 @@
       "primaryColor": "#ED1B24",
       "secondaryColor": "#A7A9AC",
       "titles": 0,
-      "logo": "/logos/pbks.png"
+      "logo": "/logos/PBKSoutline.avif"
     },
     {
       "id": "gt",
@@ -151,7 +151,7 @@
       "primaryColor": "#1C1C1C",
       "secondaryColor": "#00AEEF",
       "titles": 1,
-      "logo": "/logos/gt.png"
+      "logo": "/logos/GToutline.avif"
     },
     {
       "id": "lsg",
@@ -168,7 +168,7 @@
       "primaryColor": "#A72056",
       "secondaryColor": "#FFCC00",
       "titles": 0,
-      "logo": "/logos/lsg.png"
+      "logo": "/logos/LSGoutline.avif"
     }
   ]
 }
