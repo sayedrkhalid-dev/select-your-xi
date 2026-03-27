@@ -1,45 +1,53 @@
-import React from "react";
-
 const Subscribe = () => {
   return (
-    <div className="bg-white/85 h-50">
-      <div className="join gap-2">
-        <div>
-          <label className="input validator join-item rounded-full">
-            <svg
-              className="h-[1em] opacity-50"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <g
-                strokeLinejoin="round"
-                strokeLinecap="round"
-                strokeWidth="2.5"
+    <section className="w-full max-w-6xl mx-auto px-4 mt-20">
+      <div className="relative overflow-hidden rounded-3xl border border-slate-200/20 bg-gradient-to-br from-white/70 to-white/40 backdrop-blur-xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)]">
+        {/* Glow Effect */}
+        <div className="absolute -top-10 -right-10 w-40 h-40 bg-amber-400/30 blur-3xl rounded-full"></div>
+        <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-sky-400/20 blur-3xl rounded-full"></div>
+
+        <div className="relative flex flex-col items-center text-center px-6 py-16 gap-5">
+          {/* Heading */}
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+            Stay Updated with Cricket Insights
+          </h1>
+
+          {/* Subtext */}
+          <p className="text-slate-600 text-sm md:text-base max-w-md">
+            Get match updates, team news, and exclusive content delivered
+            straight to your inbox.
+          </p>
+
+          {/* Input + Button */}
+          <div className="w-full max-w-xl flex flex-col sm:flex-row items-center gap-3 mt-4">
+            <div className="w-full flex items-center gap-2 px-4 py-3 rounded-full border border-slate-300 bg-white/80 focus-within:ring-2 focus-within:ring-amber-400 transition-all">
+              <svg
+                className="h-5 w-5 text-slate-400"
+                xmlns="http://www.w3.org/2000/svg"
                 fill="none"
+                viewBox="0 0 24 24"
                 stroke="currentColor"
+                strokeWidth="2"
               >
-                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-              </g>
-            </svg>
-            <input
-              type="email"
-              placeholder="Enter valid email address"
-              required
-              className=" focus:border-sky-500 focus:outline focus:outline-sky-500 focus:invalid:border-pink-500 focus:invalid:outline-pink-500 "
-            />
-          </label>
-          <div className="validator-hint hidden">Enter valid email address</div>
+                <path d="M2 7l10 6 10-6" />
+                <rect x="2" y="5" width="20" height="14" rx="2" />
+              </svg>
+
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+                className="w-full bg-transparent text-sm outline-none text-slate-600 placeholder:text-slate-400"
+              />
+            </div>
+
+            <button className="px-8 py-3 rounded-full bg-linear-to-r from-amber-400 to-amber-500 text-slate-900 font-semibold shadow-lg hover:shadow-amber-500/40 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300">
+              Subscribe
+            </button>
+          </div>
         </div>
-        <button
-          className="btn btn-neutral join-item bg-linear-to-r from-amber-400 to-amber-500 text-slate-900 border-0 shadow-[0_8px_20px_-6px_rgba(245,158,11,0.5)] 
-               hover:shadow-[0_8px_25px_-5px_rgba(245,158,11,0.6)]
-               transition-shadow duration-300 rounded-full px-8"
-        >
-          Subscribe
-        </button>
       </div>
-    </div>
+    </section>
   );
 };
 

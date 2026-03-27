@@ -8,7 +8,7 @@ const Navbar = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <nav className="w-full fixed top-0 z-10 bg-slate-900 border-b border-b-white/12 shadow-lg">
+    <nav className="w-full fixed top-0 z-10 bg-slate-950 border-b border-b-white/12 shadow-lg">
       <div className="navbar max-w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
